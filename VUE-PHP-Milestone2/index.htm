@@ -7,6 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- link Css  -->
     <link rel="stylesheet" href="style.css">
+    <!-- link chiamata Axios  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
+        integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Link Vue Js  -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <title>Vue Dischi</title>
 </head>
 
@@ -33,12 +39,12 @@
                 </select>
             </div>
             <!-- Sezione Dischi  -->
-            <div class="container-card">
-                <div class="content-card-disc">
-                    <img class="img-card" src="" alt="">
-                    <h2></h2>
-                    <p></p>
-                    <p></p>
+            <div v-if="dischi.length > 0" class="container-card">
+                <div v-for="(disco,index) in dischi" :key="index" class="content-card-disc">
+                    <img class="img-card" :src="disco.poster" :alt="disco.author">
+                    <h2>{{disco.title}}</h2>
+                    <p>{{disco.author}}</p>
+                    <p>{{disco.year}}</p>
                 </div>
             </div>
             <div class="spinner" v-else>
@@ -47,8 +53,9 @@
         </div>
     </div>
     <!-- Link Vue e VueJS  -->
+
     <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
 </body>
 
 </html>
