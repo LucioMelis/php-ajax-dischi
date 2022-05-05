@@ -1,8 +1,8 @@
 <?php
 include('dischi.php');
-echo('<pre>');
-var_dump($arraydischi);
-echo('</pre>');
+// echo('<pre>');
+// var_dump($arraydischi);
+// echo('</pre>');
 ?>
 
 <!DOCTYPE html>
@@ -17,5 +17,13 @@ echo('</pre>');
 </head>
 
 <body>
+<div id="app">
+<!-- HEADER  -->
+    <div class="container-header">
+        <div class="content-img">
+            <img class="img-header" src="img/spotify-logo-2.png" alt="logo-spotify" />
+        </div>
+    </div>
+</div>
 </body>
 </html>

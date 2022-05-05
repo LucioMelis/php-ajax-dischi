@@ -71,15 +71,15 @@ select {
 }
 
 /* DA MODIFICARE */
-div {
+.content-img {
     width: 50px;
 }
 
-img {
+.img-header {
     width: 100%;
 }
 
-img {
+.img-card {
     aspect-ratio: 1/1;
     width: 100%;
 }
