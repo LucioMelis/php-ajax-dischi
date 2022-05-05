@@ -1,5 +1,5 @@
 <?php
-$arraydischi = [
+$arrayDischi = [
     [
         "author" => "Bon Jovi",
         "genre" => "Rock",
